@@ -1,0 +1,118 @@
+<div class="windowPage">
+  <header>
+    <div class="row logoHeader">
+      <div class="col-md-2">
+        <img class="mw-100" src="/img/innerNet-logo-trans.png" alt="innerNet">
+      </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="float-right welcome">Welcome <span class="member-name"></span></h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a class="logOut float-right" href="/logout">
+              Logout
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="light-change-mode btn btn-light btn-sm float-right" data-toggle="tooltip"
+              data-placement="top" title="Change color mode"><i class="far fa-moon"></i></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">To Do <i class="fas fa-list"></i></h5>
+          <hr>
+          <form action="/api/toDos" method="post">
+            <div class="form-group">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <label for="inputItem"></label>
+                  <input id="titleToDo" type="item" name="titleToDo" class="toDo-item form-control"
+                    placeholder="Enter a to do item">
+                  <input type="hidden" id="categoryToDo" name="categoryToDo" value="toDo">
+                </div>
+                {{> submit-button}}
+              </div>
+            </div>
+          </form>
+          <ul class="list-group toDo-list" id="toDo"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">To Read <i class="fas fa-book"></i></h5>
+          <hr>
+          <form action="/api/toReads" method="post">
+            <div class="form-group">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <label for="inputItem"></label>
+                  <input id="titleToRead" type="item" name="titleToRead" class="toDo-item form-control"
+                    placeholder="Enter an item to read">
+                  <input type="hidden" id="categoryToRead" name="categoryToRead" value="toRead">
+                </div>
+                {{> submit-button}}
+              </div>
+            </div>
+          </form>
+          <ul class="list-group toRead-list" id="toRead"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">To Watch <i class="fas fa-tv"></i></h5>
+          <hr>
+          <form action="/api/toWatches" method="post">
+            <div class="form-group">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <label for="inputItem"></label>
+                  <input id="titleToWatch" type="item" name="titleToWatch" class="toDo-item form-control"
+                    placeholder="Enter an item to watch">
+                  <input type="hidden" id="categoryToWatch" name="categoryToWatch" value="toWatch">
+                </div>
+                {{> submit-button}}
+              </div>
+            </div>
+          </form>
+          <ul class="list-group toWatch-list" id="toWatch"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">To Buy <i class="fas fa-shopping-basket"></i></h5>
+          <hr>
+          <form action="/api/toBuys" method="post">
+            <div class="form-group">
+              <div class="row align-items-center">
+                <div class="col-10">
+                  <label for="inputItem"></label>
+                  <input id="titleToBuy" type="item" name="titleToBuy" class="toDo-item form-control"
+                    placeholder="Enter an item to buy">
+                  <input type="hidden" id="categoryToBuy" name="categoryToBuy" value="toBuy">
+                </div>
+                {{> submit-button}}
+              </div>
+            </div>
+          </form>
+          <ul class="list-group toBuy-list" id="toBuy"></ul>
+        </div>
+      </div>
+    </div>
+    {{> footer }}
