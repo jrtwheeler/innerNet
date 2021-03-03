@@ -17,6 +17,7 @@
   * SQL
   * Express
   * Sequelize
+  * JavaScript
 
   ![Web page](/public/img/Log-In.png)
   ![Web page](/public/img/Sign-Up.png)
